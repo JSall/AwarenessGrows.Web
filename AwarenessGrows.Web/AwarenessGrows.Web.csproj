@@ -193,6 +193,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LibraryController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\TakeActionController.cs" />
     <Compile Include="Global.asax.cs">
@@ -202,12 +203,19 @@
     <Compile Include="Models\ContactInfoViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MODELINITS.cs" />
+    <Compile Include="Models\MultimediaEntryViewModel.cs" />
+    <Compile Include="Models\TextEntryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\UploadedContent\images\OHCHR_Logo_811x82.jpeg" />
+    <Content Include="Content\UploadedContent\TextFiles\OHCHR_Statement.txt" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\UploadedContent\TextFiles\UDHR.txt" />
+    <Content Include="DevComments.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -215,6 +223,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config" />
+    <None Include="Properties\PublishProfiles\AwarenessGrows.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -265,6 +274,13 @@
     <Content Include="Views\TakeAction\Index.cshtml" />
     <Content Include="Views\TakeAction\WriteSenator.cshtml" />
     <Content Include="Views\TakeAction\WriteHouseRep.cshtml" />
+    <Content Include="Views\Library\Index.cshtml" />
+    <Content Include="Views\Library\TextLibrary.cshtml" />
+    <Content Include="Views\Library\_TextLibraryEntry.cshtml" />
+    <Content Include="Views\Library\ReadTextEntry.cshtml" />
+    <Content Include="Views\Library\MMLibrary.cshtml" />
+    <Content Include="Views\Library\_MMLibraryEntry.cshtml" />
+    <Content Include="Views\Library\ReadMMEntry.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

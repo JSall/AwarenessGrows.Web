@@ -1,0 +1,13 @@
+﻿@using AwarenessGrows.Web.Models
+@model IEnumerable< MultimediaEntryViewModel>
+@{
+    ViewBag.Title = "Multimedia Library";
+}
+
+<h2>Multimedia Library</h2>
+
+@foreach (MultimediaEntryViewModel item in Model)
+{
+    @Html.Partial("_MMLibraryEntry", item)
+}
+

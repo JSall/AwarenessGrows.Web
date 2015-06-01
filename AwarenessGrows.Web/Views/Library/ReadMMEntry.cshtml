@@ -1,0 +1,22 @@
+﻿@using AwarenessGrows.Web.Models
+@model MultimediaEntryViewModel
+
+<br />
+
+<div class="row">
+    <div class="col-md-6">
+        <h4 class="text-left">
+            @Model.Title
+        </h4>
+    </div>
+</div>
+
+<br />
+<em>Source <a href="@Model.SourceUrl">@Model.SourceUrl</a></em>
+<hr />
+
+@if (Model.MediaType == "YouTube")
+{
+    <iframe width="854" height="510" src="@Model.MediaUrl" frameborder="0" allowfullscreen></iframe>
+}
+

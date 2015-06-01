@@ -1,0 +1,29 @@
+﻿@using AwarenessGrows.Web.Models
+@model TextEntryViewModel
+@{
+    ViewBag.Title = "Read Text Entry";
+    StreamReader reader = new StreamReader(Server.MapPath(Model.BodyUrl));
+}
+
+<br />
+
+<div class="row">
+    <div class="col-md-6">
+        <h4 class="text-left">
+            @Model.Title
+        </h4>
+    </div>
+    <div class="col-md-6 text-left">
+        <img src="@Model.IllistartionUrl" />
+    </div>
+</div>
+
+    <br />
+    <em>Source <a href="@Model.SourceUrl">@Model.SourceUrl</a></em>
+    <hr />
+
+    @while (!reader.EndOfStream)
+    {
+        <p>@reader.ReadLine()</p>
+    }
+

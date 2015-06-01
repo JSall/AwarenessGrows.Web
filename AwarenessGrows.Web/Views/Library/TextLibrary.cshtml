@@ -1,0 +1,13 @@
+﻿@using AwarenessGrows.Web.Models;
+@model IEnumerable<TextEntryViewModel>
+@{
+    ViewBag.Title = "Text Library";
+}
+
+<h2>Text Library</h2>
+
+@foreach (TextEntryViewModel item in Model)
+{
+    @Html.Partial("_TextLibraryEntry", item) 
+}
+

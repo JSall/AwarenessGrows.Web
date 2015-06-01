@@ -1,0 +1,33 @@
+﻿@model AwarenessGrows.Web.Models.ContactInfoViewModel
+
+@{
+    ViewBag.Title = "WriteHouseRep";
+}
+
+<h2>Write to your House Representative</h2>
+
+
+@using (Html.BeginForm())
+{
+    <div>
+        @*<div class="row">
+
+            <div class="col-md-4">
+                @Html.LabelFor(m => m.State)
+                <br />
+                @Html.EditorFor(m => m.State)
+            </div>
+        </div>*@
+        <div class="row">
+
+                <div class="col-md-4">
+                    @Html.LabelFor(m => m.ZipCode)
+                    <br />
+                    @Html.EditorFor(m => m.ZipCode)
+                </div>
+            </div>
+    </div>
+    <hr />
+
+    <input type="submit" value="Find My Representatives" />
+}
