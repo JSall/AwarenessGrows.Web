@@ -7,7 +7,7 @@ using AwarenessGrows.Web.Models;
 
 namespace AwarenessGrows.Web.Controllers
 {
-    public class LibraryController : Controller
+    public class LibraryController : BaseController
     {
         // GET: Libray
         public ActionResult Index()

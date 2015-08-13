@@ -1,0 +1,43 @@
+﻿@using System.Configuration
+@using AwarenessGrows.Web.Helpers
+
+@{
+    var appliationRegion = ConfigurationManager.AppSettings["ApplicationRegion"];
+    switch (appliationRegion)
+    {
+        case WebConstants.ApplicationRegions.DEVELOPMENT:
+            <div class="alert alert-danger">
+                @WebConstants.ApplicationRegions.DEVELOPMENTMESSAGE
+            </div>
+            break;
+        case WebConstants.ApplicationRegions.TEST:
+        <div class="alert alert-danger">
+            @WebConstants.ApplicationRegions.TESTMESSAGE
+        </div>
+            break;
+        case WebConstants.ApplicationRegions.PRODUCTION:
+        <div class="alert alert-info" style="display: none;">
+            @WebConstants.ApplicationRegions.PRODUCTIONMESSAGE
+        </div>
+            break;
+        default:
+        <div class="alert alert-danger">
+            @WebConstants.ApplicationRegions.UNKNOWNMESSAGE
+        </div>
+            break;
+    }
+}
+
+@foreach (string key in WebConstants.Alerts.ALL)
+{
+    if (TempData.ContainsKey(key))
+    {
+        <div class="alert alert-@key">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            @Html.Raw(TempData[key].ToString())
+            @*@TempData[key]*@
+        </div>
+    }
+}
+
+

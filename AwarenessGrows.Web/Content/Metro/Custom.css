@@ -1,0 +1,354 @@
+﻿
+button[disabled],
+html input[disabled],
+.disabled  {
+    background-color:lightgray;
+    cursor: not-allowed;
+}
+
+html {
+    background-color: #E6E6E6;
+  background-color: #F2F2F2;
+}
+
+body {
+  color: #383838;
+}
+
+.jumbotron {
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f2f2f2;
+    background-color: #001452;
+    background-color: #000000;
+    opacity: .3;
+
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+    min-height: 260px;
+  /*background-image: url(../images/header-bundl-2.png) ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;*/
+}
+
+.jumbotron h1 {
+    color: #808080;
+    color: #acc8f0;
+    color: #dc143c;
+    color: #4682b4;
+      /*text-shadow: 1px 1px 2px #808080;*/
+
+}
+
+.jumbotron p {
+    color: #4682b4;
+    color: #808080;
+    color: #ffffff;
+}
+
+.tiles {
+    /*background-image: url(../images/vc-tiles.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;*/
+    width: 100%;
+
+}
+
+.bg-primary {
+  color: #acc8f0;
+  background-color: #0a668d;
+}
+
+.bg-primary.lt {
+        
+    background-color: #0099cc !important;
+    background-color: #0c78a7 !important;
+    background-color: #0d89bf !important;
+}
+
+.bg-blue1 {
+    background-color: #0099CC;
+
+}
+.bg-green {
+    background-color: #b5df35;
+    background-color: #8cc540;
+    color: #ffffff;
+}
+
+.bg-red {
+    background-color: #f24040;
+    color: #262626;
+    color: #ffffff;
+
+}
+
+.bg-blue2 {
+    background-color: #1a99ce;
+    color: #262626;
+    color: #ffffff;
+
+}
+
+.img-rounded {
+  border-radius: 10px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+
+}*/
+
+h2 {
+  text-align: left;
+  /*text-shadow: 1px 1px 2px #808080;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+    font-size: 28px;
+
+}
+
+.btn {
+    min-width: 62px;
+}
+
+.btn-primary {
+    min-width: 80px;
+    padding: 5px 5px;
+}
+
+.alert {
+  padding: 3px 5px 3px 4px;
+  margin-top: 1px;
+  margin-bottom: 8px;
+  font-size: 1.4em;
+  font-size: 16px;
+  text-align: center;
+}
+
+.alert-warning {
+  color: #997300;
+  background-color: #F6EAAC;
+  border-color: #fbeed5;
+}
+
+/* CUSTOM - CD*/
+
+.table {
+    background-color: #EBEBF5;
+}
+
+.table > thead {
+    background-color: #dedfe1;
+    color: #262626;
+}
+
+.table thead > tr > th {
+  vertical-align: bottom;
+      font-weight: normal;
+
+  /*border-bottom: 2px solid #dddddd;
+    background-color: #B9DBFE;
+  background-color: #D2E8FE;*/
+}
+
+.table-condensed thead > tr > th,
+.table-condensed tbody > tr > th,
+.table-condensed tfoot > tr > th,
+.table-condensed thead > tr > td,
+.table-condensed tbody > tr > td,
+.table-condensed tfoot > tr > td {
+  padding: 3px;
+}
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: #d2e8fe;
+}
+
+fieldset {
+    /*margin-left: 10px;*/
+}
+
+.form-group {
+  margin-bottom: 10px;
+    /*margin-top: 5px;*/
+}
+
+
+.form-horizontal .control-label,
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+    padding-top: 7px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+dl {
+  margin-bottom: 5px;
+    margin-top: 8px;
+}
+
+dt, dd {
+  line-height: 1.7;
+}
+
+.form-control {
+  width: 90%;
+  height: 32px;
+  padding: 5px 5px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #2c3e50;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #dce4ec;
+  border-radius: 4px;
+}
+
+select[multiple], select[size] {
+    height: 90px;
+}
+
+.panel {
+  margin-bottom: 12px;
+}
+
+/* *************************************************** NEW ELEMENTS  *********************************************/
+
+
+/* text-box, multi-line are needed to overright html controls when using EditorFor() */
+.text-box {
+  display: block;
+  width: 90%;
+  height: 30px;
+  padding: 6px 6px;
+  line-height: 1.3;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.multi-line {
+    height: auto;
+    /*min-height: 420px;*/
+}
+
+.text-box:focus {
+  border-color: #66afe9;
+  outline: 0;
+}
+
+select {
+  display: block;
+  width: 90%;
+  height: 32px;
+  padding: 6px 6px;
+  line-height: 1.3;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+select:focus {
+  border-color: #66afe9;
+  outline: 0;
+}
+
+
+.field-validation-error {
+    color: #b94a48;
+    display: inline-block;
+    padding-top: 2px;
+}
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #b94a48
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #b94a48;
+    margin-left: 180px;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.header-sort {
+  /*font-weight: bold;*/
+  cursor: pointer;
+}
+
+input[type="text"] {
+  display: block;
+  width: 90%;
+  height: 30px;
+  padding: 6px 6px;
+  line-height: 1.3;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+  border-color: #66afe9;
+  outline: 0;
+}
+
+input[type="datetime"] {
+  /*display: block;*/
+  width: 90%;
+  height: 30px;
+  padding: 6px 6px;
+  line-height: 1.3;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+input[type="datetime"]:focus {
+  border-color: #66afe9;
+  outline: 0;
+}
+
+caption {
+    margin-bottom: 8px;
+    text-align: left;
+    color: #000080;
+}

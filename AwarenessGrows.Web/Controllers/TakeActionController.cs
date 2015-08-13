@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace AwarenessGrows.Web.Controllers
 {
-    public class TakeActionController : Controller
+    public class TakeActionController : BaseController
     {
         // GET: TakeAction
         public ActionResult Index()

@@ -1,0 +1,102 @@
+﻿@using System.Configuration
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    <title>@ConfigurationManager.AppSettings["ApplicationNameSpace"] | @ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    @Styles.Render("~/Content/themes/base/css")
+    @*@Styles.Render("~/Content/css")*@
+    @Styles.Render("~/Content/Metro/css")
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="~/Scripts/html5shiv.js"></script>
+        <script src="~/Scripts/respond.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.js"></script>
+    <![endif]-->
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+
+    <script src="~/Scripts/Metro/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.2.min.js"></script>
+    <script src="~/Scripts/Metro/bootstrap.js"></script>
+    <script src="~/Scripts/Metro/ui-load.js"></script>
+    <script src="~/Scripts/Metro/ui-jp.config.js"></script>
+    <script src="~/Scripts/Metro/ui-jp.js"></script>
+    <script src="~/Scripts/Metro/ui-nav.js"></script>
+    <script src="~/Scripts/Metro/ui-toggle.js"></script>
+
+
+
+    @RenderSection("HeadScripts", required: false)
+
+
+</head>
+<body>
+    <div class="app app-header-fixed backGroundImage">
+
+        <!-- header -->
+        <header id="header" class="app-header navbar bg-primary" role="menu">
+            <!-- navbar header -->
+            <div class="navbar-header box-shadow-inset">
+
+                <div class="navbar-collapse hidden-xs">
+
+
+                    @Html.Partial("_LoginPartial")
+                </div>
+
+            </div>
+
+
+        </header>
+
+        <aside id="aside" class="app-aside hidden-xs bg-primary lt">
+            <div class="app-aside-inner" bs-affix>
+                <div class="app-aside-body scrollable hover">
+                    <nav ui-nav>
+                        <ul class="nav">
+                            <li class="nav-header h4 m-v-sm">
+                                Navigation
+                            </li>
+
+
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Library", "Index", "Library")</li>
+                            <li>@Html.ActionLink("Take Action", "Index", "TakeAction")</li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="app-aside-footer p text-xs text-center">
+                </div>
+            </div>
+        </aside>
+
+        <div id="content" class="app-content" role="main">
+            <div class="p-h-md p-v box-shadow pos-rlt bannerImageXX">
+                @Html.Partial("_Alerts")
+                @RenderBody()
+
+            </div>
+        </div>
+
+
+
+        <!-- / content -->
+        <!-- footer -->
+        <footer id="footer" class="app-footer" role="footer"></footer>
+        <!-- / footer -->
+    </div>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+
